@@ -222,7 +222,8 @@ main {
     float: left;
 }
 .section {
-    
+    max-width: 1140px;
+    margin: 0 auto;
     border-radius: 2rem;
     box-shadow: 0px 6px 20px rgba(66, 95, 225, 0.2);
     padding: 3rem 2.5rem;
@@ -355,7 +356,7 @@ main {
         border-radius: 25px;
         margin-bottom: 1.8rem;
 }
-.section04, .section05 {
+.skill, .certificate {
     display:block;
 }
 .swiper-wrapper{
@@ -367,30 +368,30 @@ main {
 
 }
 
-.section04 ul, .section05  ul {
+.skill ul, .certificate  ul {
     width: 100%;
     display: flex
 ;
     align-items: flex-end;
 }
 
-.section04 ul li {
+.skill ul li {
     justify-items: center;
     margin-left: auto;
     width: 50px;
 }
-.section05 ul li {
+.certificate ul li {
     justify-items: center;
     margin-left: auto;
 }
-.section04 ul li:nth-child(1),.section05 ul li:nth-child(1){
+.skill ul li:nth-child(1),.certificate ul li:nth-child(1){
     margin-left:0;
 }
-.section04 ul li img {
+.skill ul li img {
     width: 50px;
 }
 
-.section04 {
+.skill {
     width: 100%;
     margin: 0 auto;
 }
@@ -644,13 +645,12 @@ h3, .h3, h4, .h4, h5, .h5 {
   }
   
   .icon-arrow.icon-arrow-left {
-    left: 30px;
+  margin-left:-60px;
   }
   
   .icon-arrow.icon-arrow-right {
-    right: 30px;
-  }
-  
+    margin-left:1130px
+   }
   @media (max-width: 991px) {
     .icon-arrow.icon-arrow-left,
     .icon-arrow.icon-arrow-right {
