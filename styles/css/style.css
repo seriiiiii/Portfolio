@@ -113,7 +113,7 @@ header h1 {
     background-color: #ccc;
   }
   header h1:before { 
-  background-color:#d78b8b;
+  background-color:#bdb4a4;
     left:45px; width:90px;
   }
   
@@ -190,6 +190,7 @@ main {
     width: 100%;
     float: left;
     font-size: 40px;
+    font-weight:500;
     color: #333333;
     padding-top: 33px;
     text-transform: uppercase;
@@ -251,12 +252,20 @@ main {
 }
 
 .section01-title {
-    line-height: 1.5;
-    font-weight: 700;
-    letter-spacing: -0.1rem;
-    margin-bottom: 3rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+  margin-bottom: 3rem;
+  width: 82%;
+  color:#8f8f8f;
 }
-
+.section01-title span{
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+  color:#f7b823;
+}
 .item-wrap {
     display: flex
 ;
@@ -352,7 +361,7 @@ main {
 .bar{
         width: 1.5rem;
         height: 0.25rem;
-        background-color: #7d4aa9;
+        background-color: #bdb4a4;
         border-radius: 25px;
         margin-bottom: 1.8rem;
 }
@@ -532,7 +541,36 @@ h3, .h3, h4, .h4, h5, .h5 {
   .image-zoom-effect:hover img {
     transform: scale(1.1); /* 확대 효과 */
   }
-  
+  .contact{
+    margin-bottom:20px;
+  }
+  .contact-form div{
+    margin-bottom:12px;
+    display:grid;
+  }
+  .contact-form div label{
+    width: 120px;
+  }
+  .contact-form div input,   .contact-form div textarea {
+    width: -webkit-fill-available;
+    padding: 10px 10px;
+    margin: 0px 20px 0px 0px;
+    border: none;
+    border-radius: 5px;
+  }
+  .contact-form .send_btn{
+    width: -webkit-fill-available;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: #bdb4a4;
+    color: #fff;
+    border: none;
+    margin: 0px 20px 0px 0px;
+  }
+  .contact-form div textarea{
+   height:226px;
+   max-height:226px;
+  }
   /* Search Popup */
   .search-popup {
     background-color: #fff;
