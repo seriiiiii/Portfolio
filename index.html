@@ -23,6 +23,33 @@
       rel="stylesheet">
     <link rel="stylesheet" href="./styles/css/common.css" />
     <link rel="stylesheet" href="./styles/css/style.css" />
+    <title>Contact Form</title>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "qKhPJrxFgALotOTdl",
+            });
+        })();
+    </script>
+   <script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm('seriiiiiip@gmail.com', 'template_2mw74lq', this)
+                .then(() => {
+                    alert('메일 전송에 성공했습니다!');
+                }, (error) => {
+                    alert('메일 전송에 실패했습니다. 다시 시도해주세요.');
+                });
+        });
+    }
+</script>
 
 </head>
 
@@ -87,7 +114,15 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="about_taital">About</div>
-                            <p class="about_text">샬라샬라</p>
+                            <div class="section01-title">
+                              <div class="bar"></div>
+                              끊임없이 배움을 추구하지만 그로인한 경험과 처음의 마음가짐을 잃지 않고 변함없는 사람이 되고 싶은<br/>
+                              <span class="typed"
+                                      data-typed-items="Web 디자이너, 퍼블리셔, UI/UX 디자이너">Web 디자이너</span>
+                                      박세리 입니다.<br/>
+                              아카데미에서부터 직무기간의 작업물을 포트폴리오에 담았습니다.
+                          </div>
+                         
                             <div class="read_bt"><a href="#">Read More</a></div>
                         </div>
                         <div class="col-md-6">
@@ -1580,15 +1615,33 @@
                     </svg></div>
                 </div>
               </section>
-              <section class="collection bg-light position-relative py-5">
+              <section class="contact bg-light position-relative py-5">
                 <div class="container">
                   <div class="row">
-                    <div class="title-xlarge text-uppercase txt-fx domino"><span class="word"><span class="letter" style="transition-delay:300ms;">C</span><span class="letter" style="transition-delay:310ms;">o</span><span class="letter" style="transition-delay:320ms;">l</span><span class="letter" style="transition-delay:330ms;">l</span><span class="letter" style="transition-delay:340ms;">e</span><span class="letter" style="transition-delay:350ms;">c</span><span class="letter" style="transition-delay:360ms;">t</span><span class="letter" style="transition-delay:370ms;">i</span><span class="letter" style="transition-delay:380ms;">o</span><span class="letter" style="transition-delay:390ms;">n</span></span><span class="letter" style="transition-delay:300ms;">&nbsp;</span></div>
-                    <div class="collection-item d-flex flex-wrap my-5">
+                    <h4 class="contact">Contact Us</h4>
+                    <div class="d-flex flex-wrap">
                       <div class="col-md-6 column-container">
-                        <div class="image-holder">
-                          <img src="styles/images/single-image-2.jpg" alt="collection" class="product-image img-fluid">
-                        </div>
+                        <form id="contact-form" class="contact-form">
+                          <!-- To simplify the tutorial, the value is static. -->
+                          <div>
+                          <label>Phone-Number</label>
+                          <input type="text" name="number">
+                          </div>
+                          <div>
+                          <label>Name</label>
+                          <input type="text" name="from_name">
+                          </div>
+                          <div>
+                          <label>Email</label>
+                          <input type="email" name="email">
+                          </div>
+                          <div>
+                          <label>Message</label>
+                          <textarea name="message"></textarea>
+                          </div>
+                          <input class="send_btn" type="submit" value="Send">
+                       
+                      </form>
                       </div>
                       <div class="col-md-6 column-container bg-white">
                         <div class="collection-content p-5 m-0 m-md-5">
